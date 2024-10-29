@@ -13,7 +13,11 @@ class Time:
         self.minute = minute
         self.second = second
 
+    def __eq__(self, other : Any) -> bool:
+        return True if other == type(Time) else False
 
+    def __repr__(self) -> str:
+        return f"Hour(s): {self.hour}, Minute(s): {self.minute}, Second(s): {self.second}"
     # Provide a developer-friendly string representation of the object.
     # input: Time for which a string representation is desired. 
     # output: string representation

@@ -1,0 +1,14 @@
+def furthest_from_origin(points:list[data.Point]) -> int|None:
+    if not points:
+        return None
+
+    furthest = 0
+    distance = sqrt(points[furthest].x ** 2 + points[furthest].y ** 2)
+
+    for i in range(len(points)):
+        test_distance = sqrt(points[i].x ** 2 + points[i].y ** 2)
+        if test_distance > distance:
+            distance = test_distance
+            furthest = i
+
+    return furthest
